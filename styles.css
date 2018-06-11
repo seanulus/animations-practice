@@ -85,10 +85,17 @@
   }
 }
 
+@keyframes fade-slide {
+  0% {
+
+  }
+}
+
 .square1 {
   background-color: blue;
   width: 100px;
   height: 100px;
+  margin-top: 10px;
   border: 2px solid black;
   transition: background-color 5s;
 }
@@ -138,4 +145,43 @@
 
 .square3:hover {
   animation: grow-wiggle 0.5s linear normal;
+}
+
+.navbar {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.home, .about, .contact {
+  width: 33%;
+  height: 100px;
+  color: black;
+  padding-top: 0px;
+  text-align: center;
+  border: 2px solid black;
+  background-color: cyan;
+  transition: background-color 2s;
+}
+
+.home:hover {
+  animation: loading-spinner 0.5s ease,
+             bounce 0.2s linear;
+  animation-delay: 0.5s;
+  /* animation-iteration-count: infinite; */
+  background-color: purple;
+}
+
+.home:hover p {
+  animation: grow-wiggle 0.5s linear;
+/* animation-iteration-count: infinite; */
+  animation-delay: 1s;
+
+}
+
+.about:hover p {
+  transform: translateY(25px);
+  transition-duration: 2s;
 }
